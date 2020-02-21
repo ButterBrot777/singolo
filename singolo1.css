@@ -1,0 +1,6 @@
+:root {
+  font-size: 0.875em; /*size = 14px, (14 / 16)em*/
+}
+:root {
+  font-size: calc(0.5em + 1vw); /* responsive font size */
+}
