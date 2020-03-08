@@ -16,17 +16,20 @@
 
 /* styles for link */
 a:link {
-  color: blue;
+  color: #ffffff;
   text-decoration: none;
 }
 a:visited {
-  color: purple;
+  /* color: purple; */
+  color: #ffffff;
+
 }
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: #f06c64;
 }
 a:active {
-  color: red;
+  color: #f06c64;
 }
 
 body {
@@ -269,10 +272,13 @@ h1, h2, h3, p {
 }
 
 .advantages__paragraph {
+  height: 63px;
   margin-top: 10px;
   font-size: 12px; 
   line-height: 21px;
   letter-spacing: 0.2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .advantages__paragraph_small {
@@ -464,14 +470,20 @@ h1, h2, h3, p {
   font-size: 1.05em;
   letter-spacing: -0.4px;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .member__paragraph {
+  height: 42px;
   width: 300px;
   margin-top: 10px;
-  font-size: 0.5em;
+  font-size: 0.667rem;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0.5px;
+  letter-spacing: -1.1px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .profile__member {
@@ -734,8 +746,13 @@ h1, h2, h3, p {
 .dot {
   color: #494e62;
 }
+.social-networks_footer > .social-networks__links {
+  height: 57px;
+  margin-top: 0;
+}
 
-.social-networks_footer li {
+.social-networks_footer > .social-networks__links > li {
   margin: 0;
   margin-left: 8px;
+  margin-top: 8px;
 }
