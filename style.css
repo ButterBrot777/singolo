@@ -162,10 +162,23 @@ h1, h2, h3, p {
   background: #f06c64;
 }
 
-
-/* .slider-image {
-  min-width: 100%;
-} */
+.phone-screen {
+  position: absolute;
+}
+.phone-screen_vertical {
+  top: 118px;
+  left: 85px;
+}
+.phone-screen_horizontal {
+  top: 187px;
+  right: 162px;
+}
+.screen_on {
+  opacity: 0;
+}
+.screen_off {
+  opacity: 1;
+}
 
 .arrow_left {
   margin-top: 281px;
@@ -651,9 +664,9 @@ h1, h2, h3, p {
 .contact-card > .tile {
   margin-bottom: 8px;
 }
-.contact-data__location {
-  /* margin-left: 10px; */
-}
+/* .contact-data__location {
+  margin-left: 10px;
+} */
 .contact-data__location > p::before {
   content: url('./assets/images/contact-location-item.png'); 
   margin-right: 11px;

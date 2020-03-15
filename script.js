@@ -6,7 +6,9 @@
 
 const MENU = document.getElementById('menu');
 const TAGS = document.getElementById('tag-container');
-const MEDIA = document.getElementById('media')
+const MEDIA = document.getElementById('media');
+const SLIDER = document.getElementById('slider');
+const PHONE_SCREEN = document.querySelectorAll('div.slider>.phone-screen');
 
 const BUTTON = document.getElementById('btn');
 const CLOSE_BUTTON = document.getElementById('close-btn');
@@ -46,7 +48,6 @@ TAGS.addEventListener('click', (event) => {
 })
 
 function swich() {
-  console.log('in function');
   let arr = [];
   MEDIA.querySelectorAll('div').forEach( elem => {
       elem.id = Math.ceil(Math.random()*100)
@@ -59,17 +60,32 @@ function swich() {
     MEDIA.insertBefore(element,MEDIA.firstChild)
   }
 }
-console.log('media: ', MEDIA)
 MEDIA.addEventListener('click', event => {
-  // console.log('event.target: ', event.target.parentNode)
-  console.log(event.target.parentNode.classList.contains('featured'))
   if(event.target.parentNode.classList.contains('featured')) {
-    // console.log('MEDIA-selector: ', MEDIA.querySelectorAll('div'))
     MEDIA.querySelectorAll('div').forEach(elem => {
-      console.log('elem: ', elem.classList)
       elem.classList.remove('portfolio-image-border')
-
     })
     event.target.parentNode.classList.add('portfolio-image-border')
   };
 })
+
+PHONE_SCREEN.forEach( elem => {
+  elem.addEventListener('click', event => {
+    if(elem.classList.contains('screen_off')) {
+      elem.classList.remove('screen_off');
+      elem.classList.add('screen_on');
+    } else {
+      elem.classList.remove('screen_on');
+      elem.classList.add('screen_off');
+    }
+  })
+})
+
+
+// .addEventListener('click', event => {
+//   console.log('event: ', event)
+//   if(SLIDER.classList.contains('screen_on')) {
+//     console.log('hello')
+//     // if(SLIDER.querySelectorAll('.iphone-screen').classList.toggle('screen_off')
+//   };
+// })
