@@ -42,3 +42,22 @@ TAGS.addEventListener('click', (event) => {
   }
 })
 
+console.log('media: ', MEDIA)
+TAGS.addEventListener('click', (event) => {
+  swich();
+})
+
+function swich() {
+  console.log('in function');
+  let arr = [];
+  MEDIA.querySelectorAll('div').forEach( elem => {
+      elem.id = Math.ceil(Math.random()*100)
+      arr.push(elem.id)
+ 
+      arr.sort();
+  });
+  for(let i of arr){
+    let element = document.getElementById(i);
+    MEDIA.insertBefore(element,MEDIA.firstChild)
+  }
+}
