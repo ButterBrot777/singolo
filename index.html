@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"> -->
   <link href="style.css" rel="stylesheet">
   <link href="singolo2_fonts.css" rel="stylesheet">
   <title>Singolo</title>
@@ -15,12 +15,12 @@
       <header class="header">
         <h1 class="logo">singolo</h1>
         <nav class="nav">
-          <ul class="top-nav">
-            <li class="home"><a href="#">home</a></li>
-            <li><a href="#Iservices">services</li>
-            <li><a href="#Iportfolio">PORTFOLIO</a></li>
-            <li><a href="#Iabout">ABOUT</a></li>
-            <li><a href="#Iform">CONTACT</a></li>
+          <ul class="top-nav" id="menu">
+            <li class="home"><a href="#" class="active header-link">home</a></li>
+            <li><a href="#Iservices" class="header-link">services</a></li>
+            <li><a href="#Iportfolio" class="header-link">portfolio</a></li>
+            <li><a href="#Iabout" class="header-link">about</a></li>
+            <li><a href="#Iform" class="header-link">contact</a></li>
           </ul>
         </nav>
       </header>
@@ -154,69 +154,69 @@
           eget lacinia odio sem nec elit.
         </div>
         <nav class="nav_container">
-          <ul class="nav_container__portfolio">
-            <li class="nav_container__featured"><a href="#">all</a></li>
-            <li><a href="#">web design</a></li>
-            <li><a href="#">graphic design</a></li>
-            <li><a href="#">artwork</a></li>
+          <ul class="nav_container__portfolio" id="tag-container">
+            <li class="nav_container__featured"><a href="#" class="tag">all</a></li>
+            <li><a href="#" class="tag">web design</a></li>
+            <li><a href="#" class="tag">graphic design</a></li>
+            <li><a href="#" class="tag">artwork</a></li>
           </ul>
         </nav>
 
-        <div class="media">
-          <figure class="featured">
+        <div class="media" id="media">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-001.png" alt="pictrue-1" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-002.png" alt="pictrue-2" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-003.png" alt="pictrue-3" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-004.png" alt="pictrue-4" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-005.png" alt="pictrue-5" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-006.png" alt="pictrue-6" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-007.png" alt="pictrue-7" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-008.png" alt="pictrue-8" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-009.png" alt="pictrue-9" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-010.png" alt="pictrue-10" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-011.png" alt="pictrue-11" height="187" width="220">
-          </figure>
+          </div>
 
-          <figure class="featured">
+          <div class="featured">
             <img src="./assets/images/pictures_singolo2/Picture-012.png" alt="pictrue-12" height="187" width="220">
-          </figure>
+          </div>
 
           <!-- If you add more elements with images to the 
           grid (for example, 15), then those following the 12th 
           should not be shown (i.e. 13, 14, 15 are not visible). -->
-          <figure class="featured"> 
+          <div class="featured"> 
               <img src="./assets/images/pictures_singolo2/Picture-012.png" alt="pictrue-12" height="187" width="220">
-          </figure>
+          </div>
 
         </div>
 
@@ -405,7 +405,7 @@
               <!-- </p> -->
               
               <!-- <p class="input-fild"> -->
-              <input id="email" type="text" class="input-fild email"
+              <input id="email" type="email" class="input-fild email"
                 name="email" placeholder="Email (Required)" required/>
               <!-- </p> -->
               <!-- <p class="input-fild"> -->
@@ -445,17 +445,13 @@
                   Elm St. 14/05 Lost City
                 </p>
               </div>
-  
+
               <div class="tile contact-data contact-data__phone">
-                <p>
-                  03528 331 86 35
-                </p>
+                <a href="tel:+035283318635"><p class="infotable">03528 331 86 35</p></a>
               </div>
 
               <div class="tile contact-data contact-data__mail">
-                <p>
-                  info@singolo.com
-                </p>
+                <a href="mailto:info@singolo.com"><p class="infotable">info@singolo.com</p></a>
               </div>
             </div>
           </div>
@@ -516,7 +512,7 @@
 
 
 
-
+<script src="./script.js"></script>
 
 </body>
 </html>

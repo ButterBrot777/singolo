@@ -28,17 +28,22 @@ a:hover {
   /* text-decoration: underline; */
   color: #f06c64;
 }
-a:active {
+/* a:active {
   color: #f06c64;
-}
+} */
 
 body {
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   margin: 0;
   /* color: #fff; */
 }
 h1, h2, h3, p {
   margin: 0;
+}
+
+.active {
+  color: #f06c64;
+  background-color: red;
 }
 
 /* body * + * {
@@ -98,7 +103,7 @@ h1, h2, h3, p {
 
 .logo {
   margin-top: 30px;
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   font-size: 1.4em;
   text-decoration: none;
   color: #ffffff;
@@ -122,9 +127,11 @@ h1, h2, h3, p {
 
 .top-nav > li {
   position: relative;
-  padding-left: 2.3em;
   cursor: pointer;
   color: #ffffff;
+}
+.top-nav > li:not(:first-child) {
+  padding-left: 2.3em;
 }
 .top-nav > li:hover {
   color: #f06c64;
@@ -207,10 +214,10 @@ h1, h2, h3, p {
 .title {
   width: 100%;
   margin-bottom: 0;
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   color: #666d89;
   font-size: 1.7em;
-  font-weight: bold;
+  font-weight: 900;
   text-transform: capitalize;
   letter-spacing: -0.2px;
 }
@@ -225,10 +232,10 @@ h1, h2, h3, p {
 
 .paragraph {
   width: 100%;
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   color: #767e9e;
   font-size: 1em;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 30px;
   text-align: justify;
 }
@@ -320,6 +327,7 @@ h1, h2, h3, p {
 .intro__slogan {
   font-weight: 400;
   font-size: 0.7em;
+  letter-spacing: -0.2px;
   color: #767e9e;
 }
 
@@ -337,7 +345,7 @@ h1, h2, h3, p {
 
 .nav_container__portfolio a {
   display: block;
-  padding: 0.3em 0.6em;
+  padding: 0.3em 0.55em;
   margin-left: 1px;
   margin-right: 9px;
   font-size: 0.45em;
@@ -359,32 +367,19 @@ h1, h2, h3, p {
 
 .media{
   height: 601px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   overflow-y: hidden;
 }
-.media > figure {
-  max-width: 300px;
-  display: inline-block;
-  margin: 0;
-  font-size: 1px;
+.media > .featured {
+  display: flex;
+  padding-bottom: 20px;
 }
 
-.media > figure:not(:nth-child(4n)) {
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-.media > figure:not(:nth-child(4n + 1)) {
-  margin-left: -5px;
-}
-.media > figure::nth-child(4n) {
-  margin-right: -5px;
-  margin-left: -5px;
-}
-.media img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.wrapper_protfolio::after {
+/* .wrapper_protfolio::after {
   content: " ";
   position: absolute;
   width: 100vw;
@@ -392,7 +387,7 @@ h1, h2, h3, p {
   background: #323746;
   margin-left: -40px;
   bottom: 0;
-} 
+}  */
 
 /*
 
@@ -435,7 +430,7 @@ h1, h2, h3, p {
 /* .title {
   width: 100%;
   margin-bottom: 0;
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   color: #666d89;
   text-transform: capitalize;
 } */
@@ -451,7 +446,7 @@ h1, h2, h3, p {
 
 /* .paragraph {
   width: 100%;
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   color: #767e9e;
   font-weight: normal;
   text-align: justify;
@@ -590,10 +585,11 @@ h1, h2, h3, p {
 
 .paragraph__contact > p {
   width: 100%;
-  /* font-family: Lato; */
+  /* font-family: 'Lato', Verdana, sans-serif; */
   color: #f0d8d9;
   font-weight: normal;
   text-align: justify;
+  letter-spacing: -0.2px;
   line-height: 1.7em;
 }
 .description__paragraph_contact {
@@ -642,7 +638,7 @@ h1, h2, h3, p {
 .contact-card {
   margin-left: 12px;
   margin-top: 25px;
-  font-family: 'Lato';
+  font-family: 'Lato', Verdana, sans-serif;
   color: #f0d8d9;
   font-weight: 400;
   font-size: 0.675em;
@@ -661,7 +657,7 @@ h1, h2, h3, p {
 .contact-data__phone {
   margin-left: -2px;
 }
-.contact-data__phone > p::before {
+.contact-data__phone p::before {
   content: url('./assets/images/contact-phone-icon.png'); 
   margin-right: 9px;
 }
@@ -669,9 +665,15 @@ h1, h2, h3, p {
   margin-left: -3px;
   padding-top: 1px;
 }
-.contact-data__mail > p::before {
+.contact-data__mail p::before {
   content: url('./assets/images/contact-mail-icon.png'); 
   margin-right: 8px;
+}
+.contact-card a {
+  font-family: 'Lato', Verdana, sans-serif;
+}
+.contact-card a:hover {
+  color: black;
 }
 
 
@@ -722,7 +724,7 @@ h1, h2, h3, p {
 ::placeholder {
   padding-top: 9px;
   padding-left: 13px;
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #f48c8f;
@@ -739,7 +741,7 @@ h1, h2, h3, p {
 
 .footer__copyriter {
   color: #666d89;
-  font-family: Lato;
+  font-family: 'Lato', Verdana, sans-serif;
   font-size: 0.675em;
   font-weight: 400;
 }
