@@ -311,11 +311,10 @@ h1, h2, h3, p {
   position: relative;
   height: 863px;
   font-size: 1.43em;
-  overflow-y: hidden;
 }
 
 .intro__logo {
-  margin-top: 60px;
+  padding-top: 39px;
   margin-bottom: 23px;
   font-weight: 900;
   text-transform: capitalize;
@@ -364,6 +363,9 @@ h1, h2, h3, p {
 .nav_container__portfolio a:hover {
   background-color: var(--dark-green);
 }
+.portfolio-image-border {
+  outline: 5px solid #F06C64;
+}
 
 .media{
   height: 601px;
@@ -372,13 +374,15 @@ h1, h2, h3, p {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 .media > .featured {
   display: flex;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
-
+.media > .featured:nth-child(n + 13) {
+  display: none;
+}
 /* .wrapper_protfolio::after {
   content: " ";
   position: absolute;

@@ -33,7 +33,6 @@ MENU.addEventListener('click', (event) => {
 //   }
 // });
 
-console.log('TAG: ', TAGS)
 TAGS.addEventListener('click', (event) => {
   event.preventDefault();
   if(event.target.classList.contains('tag')) {
@@ -42,7 +41,6 @@ TAGS.addEventListener('click', (event) => {
   }
 })
 
-console.log('media: ', MEDIA)
 TAGS.addEventListener('click', (event) => {
   swich();
 })
@@ -61,3 +59,17 @@ function swich() {
     MEDIA.insertBefore(element,MEDIA.firstChild)
   }
 }
+console.log('media: ', MEDIA)
+MEDIA.addEventListener('click', event => {
+  // console.log('event.target: ', event.target.parentNode)
+  console.log(event.target.parentNode.classList.contains('featured'))
+  if(event.target.parentNode.classList.contains('featured')) {
+    // console.log('MEDIA-selector: ', MEDIA.querySelectorAll('div'))
+    MEDIA.querySelectorAll('div').forEach(elem => {
+      console.log('elem: ', elem.classList)
+      elem.classList.remove('portfolio-image-border')
+
+    })
+    event.target.parentNode.classList.add('portfolio-image-border')
+  };
+})
