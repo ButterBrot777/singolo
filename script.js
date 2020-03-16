@@ -14,8 +14,8 @@ const PREV = document.querySelector('.arrow_left');
 const NEXT = document.querySelector('.arrow_right');
 const SLIDES = document.querySelectorAll('.slide');
 
-const BUTTON = document.getElementById('btn');
-const CLOSE_BUTTON = document.getElementById('close-btn');
+// const BUTTON = document.getElementById('btn');
+// const CLOSE_BUTTON = document.getElementById('close-btn');
 
 MENU.addEventListener('click', (event) => {
   console.log(MENU);
@@ -87,15 +87,6 @@ PHONE_SCREEN.forEach( elem => {
   })
 })
 
-
-// .addEventListener('click', event => {
-//   console.log('event: ', event)
-//   if(SLIDER.classList.contains('screen_on')) {
-//     console.log('hello')
-//     // if(SLIDER.querySelectorAll('.iphone-screen').classList.toggle('screen_off')
-//   };
-// })
-
 let sliderIndex = 0;
 
  showSlides = (slideNumber) => {
@@ -117,3 +108,44 @@ PREV.addEventListener('click', () => {
 NEXT.addEventListener('click', () => {
 	showSlides(++sliderIndex)
 })
+
+// <!-- --------------- MODAL WINDOW --------------------->
+const BUTTON = document.getElementById('open');
+const CLOSE_BUTTON1 = document.getElementById('close');
+const CLOSE_BUTTON2 = document.getElementById('close-too');
+const MODAL = document.getElementById('modal');
+const SUBJECT = document.getElementById('subject');
+const DESCRIBE = document.getElementById('describe');
+
+BUTTON.addEventListener('click', function(event) {
+  event.preventDefault();
+  modal.style.display = 'block';
+  
+  buildModalMessage()
+});
+
+function buildModalMessage() {
+  
+  if(!SUBJECT.value) {
+    document.getElementsByClassName('modal__subject')[0].innerText = 'Without subject'
+  } else {
+    document.getElementsByClassName('modal__subject')[0].innerText = `Subject: ${SUBJECT.value.toString()}`;
+  }
+  if(!DESCRIBE.value) {
+    document.getElementsByClassName('modal__description')[0].innerText = 'Without description ';
+  } else {
+    document.getElementsByClassName('modal__description')[0].innerText = `Description: ${DESCRIBE.value.toString()}`;
+  }
+
+}
+
+CLOSE_BUTTON1.addEventListener('click', function(event) {
+  event.preventDefault();
+  modal.style.display = 'none';
+});
+CLOSE_BUTTON2.addEventListener('click', function(event) {
+  event.preventDefault();
+  modal.style.display = 'none';
+});
+
+// <!-- --------------- MODAL WINDOW end --------------------->

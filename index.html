@@ -40,6 +40,7 @@
         </div>
 
         <div class="slide slide-2">
+          <img class="phone-screen phone-screen_slide-2 screen_on" src="./assets/images/iPhone/Black-vertical.png" alt="iPhone">
           <img class="slider__image" src="./assets/images/iPhone/phone-group.png" alt="phone">
         </div>
 
@@ -381,6 +382,27 @@
 
   <!-- --------------- singolo 3 --------------------->
 
+
+  <!-- --------------- MODAL WINDOW --------------------->
+
+  <div class="modal" id="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-body">
+      <button class="modal-close" id="close">
+        <span class="sr-only">close</span>
+      </button>
+      <h2 class="modal__title">ACHTUNG!</h2>
+      <h4>The letter was sent.</h4>
+      <p class="modal__subject">Subject: </p>
+      <p class="modal__description">Description:  </p>
+      
+      <button id="close-too">OK</button>
+    </div>
+  </div>
+
+  <!-- --------------- MODAL WINDOW end --------------------->
+
+
   <div class="wrapper__form">
     <div class="wrapper__inner">
   
@@ -402,36 +424,27 @@
         </div>
       </div>
   
-  
-  
         <div class="contact-container">
-
 
           <div class="login tile">
             <form class="login-form" action="https://www.w3schools.com/action_page.php"
               method="GET" target="_self">
-              <!-- <p> -->
-                <input id="username" type="text" class="input-fild username"
-                name="username" placeholder="Name (Required)" required/>
-              <!-- </p> -->
               
-              <!-- <p class="input-fild"> -->
+              <input id="username" type="text" class="input-fild username"
+              name="username" placeholder="Name (Required)" required/>
+                
               <input id="email" type="email" class="input-fild email"
                 name="email" placeholder="Email (Required)" required/>
-              <!-- </p> -->
-              <!-- <p class="input-fild"> -->
+                
               <input id="subject" type="text" class="input-fild subject"
-                name="subject" placeholder="Subject"/>
-              <!-- </p> -->
-              <!-- <p class="input-fild input-fild__featured"> -->
+                name="subject" placeholder="Subject" maxlength="70"/>
+              
               <textarea id="describe" type="text" class="input-fild describe"
-                name="describe" placeholder="Describe your project in detail..."></textarea>
-              <!-- </p> -->
+                name="describe" placeholder="Describe your project in detail..." maxlength="697"></textarea>
             
-              <button type="submit">Send</button>
+              <button id="open" type="submit">Send</button>
             </form>
           </div>
-  
   
           <div class="contact-info">
   
@@ -468,60 +481,53 @@
           </div>
       </div>
     </div>
-
   </div>
   
 </main>
 
-  <div class="wrapper__footer">
-    <div class="wrapper__inner">
+<div class="wrapper__footer">
+  <div class="wrapper__inner">
 
-      <div class="footer">
+    <footer class="footer">
 
-        <div class="footer__copyriter">
-          <p>
-            &copy Copyright 2013 <span class="dot">·</span> by PSDchat.com
-          </p>
+      <div class="footer__copyriter">
+        <p>
+          &copy Copyright 2013 <span class="dot">·</span> by PSDchat.com
+        </p>
+      </div>
+
+      <div class="footer__links">
+
+        <div class="social-networks social-networks_footer">
+          <ul class="social-networks__links">
+            <li class="facebook">
+              <a href="http://facebook.com" target="_blank">
+                <img src="./assets/images/pictures_singolo2/facebook-icon-round.png" alt="facebook icon" height="32" width=32>
+              </a>
+            </li>
+            <li class="google">
+              <a href="http://facebook.com" target="_blank">
+                <img src="./assets/images/pictures_singolo2/goolge-icon-round.png" alt="google icon" height="32" width="32">
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="http://facebook.com" target="_blank">
+                <img src="./assets/images/pictures_singolo2/twitter-icon-round.png" alt="twitter icon" height="32" width="32">
+              </a>
+            </li>
+            <li class="linkedin">
+              <a href="http://facebook.com" target="_blank">
+                <img src="./assets/images/pictures_singolo2/linkedin-icon-round.png" alt="linkedin icon" height="32" width="32">
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <div class="footer__links">
+      </div> 
 
-          <div class="social-networks social-networks_footer">
-            <ul class="social-networks__links">
-              <li class="facebook">
-                <a href="http://facebook.com" target="_blank">
-                  <img src="./assets/images/pictures_singolo2/facebook-icon-round.png" alt="facebook icon" height="32" width=32>
-                </a>
-              </li>
-              <li class="google">
-                <a href="http://facebook.com" target="_blank">
-                  <img src="./assets/images/pictures_singolo2/goolge-icon-round.png" alt="google icon" height="32" width="32">
-                </a>
-              </li>
-              <li class="twitter">
-                <a href="http://facebook.com" target="_blank">
-                  <img src="./assets/images/pictures_singolo2/twitter-icon-round.png" alt="twitter icon" height="32" width="32">
-                </a>
-              </li>
-              <li class="linkedin">
-                <a href="http://facebook.com" target="_blank">
-                  <img src="./assets/images/pictures_singolo2/linkedin-icon-round.png" alt="linkedin icon" height="32" width="32">
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </div> 
-
-      </div>    
-    </div>
+    </footer>    
   </div>
-
-
-
-
-
-
+</div>
 
 <script src="./script.js"></script>
 

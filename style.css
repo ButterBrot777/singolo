@@ -171,6 +171,11 @@ h1, h2, h3, p {
   top: 118px;
   left: 85px;
 }
+.phone-screen_slide-2 {
+  top: 69px;
+  left: 154px;
+  height: 355px;
+}
 .phone-screen_horizontal {
   top: 187px;
   right: 91px;
@@ -224,9 +229,86 @@ h1, h2, h3, p {
 	display: block;
 }
 
+/* ~~~~~~~~~~~~~~~ MODAL WINDOW ~~~~~~~~~~~~~~~~~ */
 
+button {
+  padding: .5em .7em;
+  border: 1px solid #8d8d8d;
+  background-color: white;
+  font-size: 1em;
+}
 
-/* ~~~~~~~~~~~~~~~ SLIDER end ~~~~~~~~~~~~~~~~~ */
+.top-banner {
+  padding: 1em 0;
+  background-color: #ffd698;
+}
+
+.top-banner-inner {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.modal {
+  display: none;
+}
+
+.modal__title {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+  position: fixed;
+  top: 3em;
+  bottom: 3em;
+  right: 20%;
+  left: 20%;
+  padding: 2em 3em;
+  background-color: white;
+  overflow: auto;
+}
+
+.modal-body > * + * {
+  margin-top: 15px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.3em;
+  font-size: 2em;
+  height: 1.5em;
+  width: 1.5em;
+  cursor: pointer;
+  border: 0;
+}
+.modal-close::before {
+  display: block;
+  content: '\00D7';
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* ~~~~~~~~~~~~~~~ MODAL WINDOW end ~~~~~~~~~~~~~~~~~ */
+
 
 .services {
   display: block;
