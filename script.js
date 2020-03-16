@@ -8,14 +8,18 @@ const MENU = document.getElementById('menu');
 const TAGS = document.getElementById('tag-container');
 const MEDIA = document.getElementById('media');
 const SLIDER = document.getElementById('slider');
-const PHONE_SCREEN = document.querySelectorAll('div.slider>.phone-screen');
+const PHONE_SCREEN = document.querySelectorAll('.phone-screen');
+
+const PREV = document.querySelector('.arrow_left');
+const NEXT = document.querySelector('.arrow_right');
+const SLIDES = document.querySelectorAll('.slide');
 
 const BUTTON = document.getElementById('btn');
 const CLOSE_BUTTON = document.getElementById('close-btn');
 
 MENU.addEventListener('click', (event) => {
   console.log(MENU);
-  event.preventDefault();
+  // event.preventDefault();
   if(event.target.classList.contains('header-link')) {
     MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
@@ -44,7 +48,9 @@ TAGS.addEventListener('click', (event) => {
 })
 
 TAGS.addEventListener('click', (event) => {
-  swich();
+  if(event.target.classList.contains('tag')) {
+    swich();
+  }
 })
 
 function swich() {
@@ -89,3 +95,25 @@ PHONE_SCREEN.forEach( elem => {
 //     // if(SLIDER.querySelectorAll('.iphone-screen').classList.toggle('screen_off')
 //   };
 // })
+
+let sliderIndex = 0;
+
+ showSlides = (slideNumber) => {
+	if (slideNumber > SLIDES.length - 1) {
+		sliderIndex = 0;
+	}
+	if (slideNumber < 0) {
+		sliderIndex = SLIDES.length - 1;
+  }
+  SLIDES.forEach(elem => {
+    elem.classList.remove('show')
+  })
+	SLIDES[sliderIndex].classList.toggle('show');
+}
+
+PREV.addEventListener('click', () => {
+	showSlides(--sliderIndex);
+})
+NEXT.addEventListener('click', () => {
+	showSlides(++sliderIndex)
+})

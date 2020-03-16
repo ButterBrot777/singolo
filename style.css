@@ -153,11 +153,13 @@ h1, h2, h3, p {
   background-color: #323746;
 }
 
+/* ~~~~~~~~~~~~~~~ SLIDER ~~~~~~~~~~~~~~~~~ */
+
 .slider {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: 594px;
+  height: 591px;
 
   background: #f06c64;
 }
@@ -171,7 +173,7 @@ h1, h2, h3, p {
 }
 .phone-screen_horizontal {
   top: 187px;
-  right: 162px;
+  right: 91px;
 }
 .screen_on {
   opacity: 0;
@@ -181,10 +183,11 @@ h1, h2, h3, p {
 }
 
 .arrow_left {
-  margin-top: 281px;
-  margin-left: 2px;
+  top: 281px;
+  left: 2px;
   cursor: pointer;
   position: absolute;
+  z-index: 100;
 }
 
 .iphone-vertical {
@@ -199,20 +202,31 @@ h1, h2, h3, p {
 }
 
 .arrow_right {
-  margin-left: 55px;
+  right: 0px;
+  top: 281px;
   cursor: pointer;
   position: absolute;
-  margin-top: 281px;
+  z-index: 100;
 }
 
-.slider__bottom {
+.slide {
+  height: 591px;
+  display: none;
+  text-align: center;
   position: absolute;
-  display: block;
-  width: 100%;
-  bottom: 0;
-  height: 6px;
-  background-color: #ea676b;;
 }
+.slide-2 {
+  top: 53px;
+  left: 220px;
+}
+
+.show {
+	display: block;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~ SLIDER end ~~~~~~~~~~~~~~~~~ */
 
 .services {
   display: block;
