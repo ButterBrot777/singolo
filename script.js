@@ -125,18 +125,18 @@ BUTTON.addEventListener('click', function(event) {
 });
 
 function buildModalMessage() {
-  
+  let modalMessageSubject = document.getElementsByClassName('modal__subject')[0];
+  let inputDescribe = document.getElementsByClassName('modal__description')[0];
   if(!SUBJECT.value) {
-    document.getElementsByClassName('modal__subject')[0].innerText = 'Without subject'
+    modalMessageSubject.innerText = 'Without subject'
   } else {
-    document.getElementsByClassName('modal__subject')[0].innerText = `Subject: ${SUBJECT.value.toString()}`;
+    modalMessageSubject.innerText = `Subject: ${SUBJECT.value.toString()}`
   }
   if(!DESCRIBE.value) {
-    document.getElementsByClassName('modal__description')[0].innerText = 'Without description ';
+    inputDescribe.innerText = 'Without description ';
   } else {
-    document.getElementsByClassName('modal__description')[0].innerText = `Description: ${DESCRIBE.value.toString()}`;
+    inputDescribe.innerText = `Description: ${DESCRIBE.value.toString()}`;
   }
-
 }
 
 CLOSE_BUTTON1.addEventListener('click', function(event) {
