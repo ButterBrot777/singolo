@@ -69,14 +69,14 @@ function swich() {
 MEDIA.addEventListener('click', event => {
   if(event.target.parentNode.classList.contains('featured')) {
     MEDIA.querySelectorAll('div').forEach(elem => {
-      elem.classList.remove('portfolio-image-border')
+      elem.classList.remove('portfolio-image-border');
     })
-    event.target.parentNode.classList.add('portfolio-image-border')
+    event.target.parentNode.classList.add('portfolio-image-border');
   };
 })
 
 PHONE_SCREEN.forEach( elem => {
-  elem.addEventListener('click', event => {
+  elem.addEventListener('click', () => {
     if(elem.classList.contains('screen_off')) {
       elem.classList.remove('screen_off');
       elem.classList.add('screen_on');
@@ -100,6 +100,12 @@ let sliderIndex = 0;
     elem.classList.remove('show')
   })
 	SLIDES[sliderIndex].classList.toggle('show');
+  let sliderBGColor = document.getElementsByClassName('wrapper__slider')[0];
+  if(sliderBGColor.style.backgroundColor === '') {
+    sliderBGColor.style.backgroundColor = '#648BF0';
+  } else {
+    sliderBGColor.style.backgroundColor = '';
+  }
 }
 
 PREV.addEventListener('click', () => {
