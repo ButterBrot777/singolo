@@ -125,9 +125,11 @@ const DESCRIBE = document.getElementById('describe');
 
 BUTTON.addEventListener('click', function(event) {
   event.preventDefault();
-  modal.style.display = 'block';
   
-  buildModalMessage()
+  if(document.forms[0].reportValidity()) {
+    modal.style.display = 'block';
+    buildModalMessage();
+  }
 });
 
 function buildModalMessage() {
