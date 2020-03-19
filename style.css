@@ -274,6 +274,7 @@ button {
   padding: 2em 3em;
   background-color: white;
   overflow: auto;
+  z-index: 200;
 }
 
 .modal-body > * + * {

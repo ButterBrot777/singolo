@@ -147,11 +147,25 @@ function buildModalMessage() {
 
 CLOSE_BUTTON1.addEventListener('click', function(event) {
   event.preventDefault();
+  clearForm();
   modal.style.display = 'none';
 });
 CLOSE_BUTTON2.addEventListener('click', function(event) {
   event.preventDefault();
+  clearForm();
   modal.style.display = 'none';
 });
+
+function clearForm () {
+  let inputs = document.getElementsByTagName('input');
+  for (let input of inputs) {
+    input.value = '';
+  }
+
+  let textarea = document.getElementsByTagName('textarea');
+  for (let input of textarea) {
+    input.value = '';
+  }
+}
 
 // <!-- --------------- MODAL WINDOW end --------------------->
