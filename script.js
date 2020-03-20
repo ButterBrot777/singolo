@@ -239,6 +239,12 @@ function clearForm () {
           privates.timer.become();
         }
       };
+      // Change background color
+      this.change_background = () => {
+        let background = document.getElementsByClassName('wrapper__slider');
+        background[0].classList.toggle('wrapper__slider_blue')
+      }
+
       // Pause timer carousel
       this.pause = () => {
         if (privates.setting.autoplay === true) {
@@ -316,11 +322,13 @@ function clearForm () {
       if (privates.sel.prev !== null) {
         privates.sel.prev.addEventListener('click', () => {
           this.prev_slide();
+          this.change_background();
         });
       }
       if (privates.sel.next !== null) {
         privates.sel.next.addEventListener('click', () => {
           this.next_slide();
+          this.change_background();
         });
       }
       // Touch events
@@ -339,10 +347,6 @@ function clearForm () {
       }
     }
   }
-
-
-
-
 
 	function Timer(callback, delay) {
 		/* privates properties */
