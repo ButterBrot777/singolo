@@ -164,19 +164,20 @@ h1, h2, h3, p {
 
 .phone-screen {
   position: absolute;
+  z-index: 99999;
 }
 .phone-screen_vertical {
-  top: 118px;
+  top: 80px;
   left: 85px;
 }
 .phone-screen_slide-2 {
   top: 69px;
-  left: 154px;
+  left: 361px;
   height: 355px;
 }
 .phone-screen_horizontal {
-  top: 187px;
-  right: 91px;
+  top: 151px;
+  right: 162px;
 }
 .screen_on {
   opacity: 0;
@@ -869,4 +870,91 @@ button {
   margin: 0;
   margin-left: 8px;
   margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrap {
+	margin: 0 auto;
+  width: 100%;
+  height: 594px;
+  max-width: 940px;
+  /* background-color: green; */
+}
+
+
+
+/* MAIN STYLES */
+.b-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+.b-carousel__prev,
+.b-carousel__next {
+  position: absolute;
+  top: 51%;
+  width: 16px;
+  height: 27px;
+  background: url("./assets/images/iPhone/arrow-left.png") no-repeat;
+  /* transform: translateY(-50%) translateZ(0); */
+  cursor: pointer;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 3;
+  border: none;
+}
+
+.b-carousel__next {
+  background: url("./assets/images/iPhone/arrow-right.png") no-repeat;
+  left: auto;
+  right: -8px;
+}
+
+.b-carousel__wrap {
+  display: flex;
+  transition: transform .5s;
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  margin-top: 37px;
+}
+
+.b-carousel__item {
+  flex: 0 0 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.slide-1 {
+  /* margin-top: 52px; */
+}
+
+.b-carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.s-notransition {
+	transition: 0s;
 }
