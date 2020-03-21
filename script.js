@@ -1,3 +1,4 @@
+const HEADER = document.querySelector('#Iheader');
 const MENU = document.getElementById('menu');
 const TAGS = document.getElementById('tag-container');
 const MEDIA = document.getElementById('media');
@@ -8,32 +9,27 @@ const PREV = document.querySelector('.arrow_left');
 const NEXT = document.querySelector('.arrow_right');
 const SLIDES = document.querySelectorAll('.slide');
 
-// const BUTTON = document.getElementById('btn');
-// const CLOSE_BUTTON = document.getElementById('close-btn');
-
 // <!-- --------------- HEADER MENU SCROLL --------------------->
 
-MENU.addEventListener('click', (event) => {
-  // event.preventDefault();
-  if(event.target.classList.contains('header-link')) {
-    MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
-  }
-});
+document.addEventListener('scroll', onScroll);
+const linkDebug = document.querySelector('.main > section')
 
-// MENU.addEventListener('click', (event) => {
-//   console.log(MENU);
-//   console.log('ashki', MENU.querySelectorAll('li>a'));
-//   console.log('if pruve', event.target.classList.contains('header-link'));
-//   event.preventDefault();
-//   if(event.target.classList.contains('header-link')) {
-//     MENU.querySelectorAll('li>a').forEach(el => {
-//       console.log('in selector: ', el);
-//       el.target.style.color = '#white'});
-//     event.target.style.color = '#red';
-//   }
-// });
-
+function onScroll(event) {
+  const curPosition = window.scrollY + HEADER.offsetHeight;
+	const sections = document.querySelectorAll('.main > section, body > section');
+  const links = document.querySelectorAll('.header-link');
+  
+	sections.forEach((el) => {
+		if (el.offsetTop <= curPosition) {
+      links.forEach((a) => {
+				a.classList.remove('active');
+				if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+					a.classList.add('active');
+				}
+			})
+		}
+	});
+}
 
 // <!-- --------------- TAGS SWICH & CHANGE --------------------->
 

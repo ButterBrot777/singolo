@@ -8,6 +8,12 @@
   font-size: calc(0.5em + 1vw); /* responsive font size
 } */
 
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 *,
 ::before,
 ::after {
@@ -41,28 +47,36 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-.active {
+a.active {
   color: #f06c64;
-  background-color: red;
+  /* background-color: red; */
 }
 
 /* body * + * {
   margin-top: 0.5em;
 } */
 
-/* img {
-  min-width: 100%; /* image takes the width of its container to not overflow it
-}*/
+a.header-link {
+  top: -250px;
+}
+section.anchor {
+  top: -250px;
+}
 
 .wrapper__header {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 .wrapper__inner {
   max-width: 940px;
   margin: 0 auto;
 }
 .wrapper__slider {
+  padding-top: 95px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
 }
@@ -71,18 +85,23 @@ h1, h2, h3, p {
 }
 
 .wrapper__services {
+  scroll-margin-top: 89px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
 }
 .wrapper__protfolio {
+  scroll-margin-top: 89px;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
-.wrapper__form {
-  background-color: #f06c64;
-  border-bottom: 6px solid #ea676b;
+.wrapper__about-us {
+  scroll-margin-top: 89px;
+  position: relative;
+  padding-bottom: 27px;
+  background-color: #f2f2f2;
 }
 .wrapper__form {
+  scroll-margin-top: 89px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
 }
@@ -102,7 +121,11 @@ h1, h2, h3, p {
   display: flex;
   justify-content: space-between;
   height: 89px;
-  /* background: #2d303a; */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
 }
 
 .logo {
@@ -537,12 +560,6 @@ button {
   }
   
   */
-  
-.wrapper__about-us {
-  position: relative;
-  padding-bottom: 27px;
-  background-color: #f2f2f2;
-}
 
 /* .title {
   width: 100%;
@@ -945,9 +962,6 @@ button {
   align-items: center;
   justify-content: center;
   position: relative;
-}
-.slide-1 {
-  /* margin-top: 52px; */
 }
 
 .b-carousel__img {
