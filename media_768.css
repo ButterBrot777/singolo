@@ -1,0 +1,288 @@
+@media (min-width: 375px) and (max-width: 767px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    /* margin-left: calc(50vw - 80px); */
+    height: 71px;
+  }
+  .nav {
+    display: none;
+  }
+  .logo {
+    margin-top: 6.3%;
+    margin-right: -3%;
+    font-size: 1.1em;
+  }
+  .wrapper__header > .wrapper__inner {
+    padding: 0;
+  }
+
+  .header__burger {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    width: 25px;
+    height: 20px;
+    background-image: url("./assets/images/Burger-menu-icon.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: cover;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .rotate {
+    transform: rotate(90deg);
+  }
+
+  .top-nav {
+    margin-top: 39px;
+  }
+  .slider__image {
+    width: 100%;
+    height: 100%;
+    padding: 0 11.1%;
+  }
+  .image-2 {
+    width: 70%;
+  }
+  .wrapper__slider {
+    border-bottom: none;
+    /* padding-top: 6px; */
+  }
+
+  .wrapper__header,
+  .wrapper__services,
+  .wrapper__protfolio,
+  .wrapper__about-us,
+  .wrapper__form {
+    border-bottom: none;
+  }
+
+  .phone-screen_horizontal {
+    top: 28.3%;
+    right: 19.8%;
+    width: 33%;
+  }
+
+  .phone-screen_vertical {
+    top: 14%;
+    width: 19%;
+    left: 12%;
+  }
+  .phone-screen_slide-2 {
+    top: 14%;
+    left: 39.7%;
+    width: 19%;
+    height: 68%;
+  }
+
+  .b-carousel__prev, .b-carousel__next {
+    top: 49%;
+    left: 3%;
+  }
+  .b-carousel__next {
+    left: auto;
+    top: 49.3%;
+    right: 0.6%;
+  }
+
+  .wrap {
+    padding-bottom: 5.9%;
+  }
+
+  .wrapper__inner {
+    padding: 0 32px;
+  }
+  .description__services {
+    padding-top: 9%;
+  }
+  .description__paragraph {
+    margin-bottom: 10%;
+    letter-spacing: -0.2px;
+  }
+
+  .advantages__item {
+    flex: 0 0 100%;
+    
+    display: flex;
+    width: 25%;
+    margin: 0 0px 10.3% 0;
+  }
+
+  .wrapper__services {
+    border-bottom: none;
+    padding-bottom: 2%;
+  }
+  .services {
+    padding-right: 4%;
+    margin-bottom: -4%;
+  }
+  .intro__logo {
+    font-size: 0.775em;
+    padding-top: 13.5%;
+  }
+
+  .nav_container__portfolio {
+    margin: 5.2% 0 5% -1%;
+  }
+  .intro__slogan {
+    font-weight: lighter;
+    font-size: 0.7em;
+    letter-spacing: 0.2px;
+    line-height: 1.65em;
+    color: #767e9e;
+  }
+  .media {
+    display: flex;
+    flex-wrap: wrap;  
+    padding-bottom: 10%;
+  }
+
+  .featured {
+    font-size: 0;
+    margin: 7px;
+    flex: 1 0 30%;
+    /* padding-right: 20px; */
+  }
+  
+  .featured::before{
+    content: "";
+    float: left;
+    /* padding-top: 100%; */
+  }
+  
+  .featured > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .featured:nth-child(n+9) {
+    display: none;
+  }
+
+  .portfolio-border {
+    outline: 5px solid #F06C64 ;
+  }
+
+  
+  /* .wrapper__inner + .wrapper__inner {
+    padding: 0;
+  } */
+  
+  .wrapper__inner_media {
+    padding: 0 22px;
+  }
+  .description__about-us {
+    padding-top: 11%;
+  }
+
+  .wrapper__inner_profile {
+    padding: 10px 31px 0;
+  }
+
+  .member__paragraph {
+    margin-top: 0;
+  }
+  .social-networks__links {
+    margin-top: 4%;
+    height: 3.9em;
+  }
+  .wrapper__about-us {
+    padding-bottom: 2.4%;
+  }
+  .description__form {
+    padding-top: 15%;
+  }
+  .profile {
+    flex-direction: column;
+  }
+  .profile__member {
+    flex: 1 0 25%;
+    margin: 0px;
+    width: 100%;
+  }
+  .profile__name {
+    margin-top: 4%;
+  }
+
+  .wrapper__about-us::after {
+    height: 0;
+  }
+  .description__paragraph_about-us {
+    margin-bottom: 4.6%;
+    line-height: 1.7em;
+    letter-spacing: 0.1px;
+  }
+
+  .description__paragraph_contact {
+    margin-bottom: 3%;
+  }
+  .contact-container {
+    display: block;
+    margin-top: 6%;
+  }
+  .login {
+    margin: 0;
+  }
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-fild {
+    margin-bottom: 3.7%;
+  }
+
+  .describe {
+    height: 9em;
+  }
+
+  .login-form button {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #cc6b5a;
+    border-radius: 5px;
+    background-color: yellow;
+    padding: 0.8em 1em;
+    cursor: pointer;
+  } 
+  .wrapper__form {
+    scroll-margin-top: 89px;
+    padding-bottom: 8.5%;
+  }
+  .contact-info {
+    display: block;
+    padding-top: 8%;
+  }
+  .contact-info > * {
+    margin-left: 0;
+  }
+  .contact-info__paragraph {
+    margin-top: 0;
+  }
+  .contact-card {
+    margin-top: 5.5%;
+  }
+  .contact-card > .tile {
+    margin-bottom: 4%;
+  }
+
+
+
+  .footer {
+    padding: 0 2.5% 0 0;
+    justify-content: center;
+  }
+  .footer__copyriter {
+    display: none;
+  }
+}
+  
+  
+  
+  
+  /* ========================== */
+  
+  
+  
